@@ -3,9 +3,11 @@ import { sassPlugin } from 'esbuild-sass-plugin';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
 
+const IS_DEVELOPMENT = process.env.NODE_ENV === 'development';
+
 let ctx = await esbuild.context({
 	entryNames: '[name]',
-	entryPoints: ['src/main.scss'],
+	entryPoints: ['src/index.js', 'src/index.scss'],
 	sourcemap: IS_DEVELOPMENT ? 'inline' : false,
 	outdir: 'assets',
 	target: 'es2017',
