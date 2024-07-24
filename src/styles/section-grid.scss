@@ -1,6 +1,10 @@
 .grid-section {
 	padding: 100px 30px 30px;
 
+	@media screen  and (max-width: 640px) {
+		padding: 30px;
+	}
+
 	&__title {
 		position: relative;
 		padding-bottom: 25px;
@@ -22,6 +26,11 @@
 			background-color: #fff;
 			transform: translateX(-50%);
 		}
+
+		@media screen  and (max-width: 640px) {
+			margin-bottom: 25px;
+			font-size: 28px;
+		}
 	}
 
 	&__subtitle {
@@ -36,6 +45,10 @@
 		p {
 			margin: 0;
 		}
+
+		@media screen  and (max-width: 640px) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__wrapper {
@@ -45,6 +58,7 @@
 
 		@media screen and (max-width: 1024px) {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 20px;
 		}
 
 		@media screen and (max-width: 640px) {
